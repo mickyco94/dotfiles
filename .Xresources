@@ -1,0 +1,53 @@
+! DPI
+Xft.dpi:   166
+
+! special
+*.foreground:   #d8dee9
+*.background:   #151515
+
+! black
+*.color0:       #151515
+*.color8:       #6c757d
+
+! red
+*.color1:       #fe5f55
+*.color9:       #fe5f55
+
+! green
+*.color2:       #77bfa3
+*.color10:      #77bfa3
+
+! yellow
+*.color3:       #f0c674
+*.color11:      #f0c674
+
+! blue
+*.color4:       #b084cc
+*.color12:      #b084cc
+
+! magenta
+*.color5:       #ef6f6c
+*.color13:      #ef6f6c
+
+! cyan
+*.color6:       #62bfed
+*.color14:      #62bfed
+
+! white
+*.color7:       #6c757d
+*.color15:      #d8dee9
+
+! Appearance
+*.scrollBar: false
+*.lineSpace: 1
+*.internalBorder: 15
+*.font: xft:Jetbrains Mono:style=Regular:size=10
+*.boldFont: xft:Jetbrains Mono:style=Bold:size=10
+*.italicFont: xft:Jetbrains Mono:style=Italic:size=10
+*.boldItalicFont: xft:Jetbrains Mono:style=Bold Italic:size=10
+
+! Restore Ctrl+Shift+(c|v)
+URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+URxvt.iso14755: false
+URxvt.iso14755_52: false
