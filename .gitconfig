@@ -1,0 +1,37 @@
+
+
+[alias]
+	new = "!f() { git checkout -b $USER/$1; }; f"
+	wipe = "reset head --hard"
+
+[push]
+	default = nothing
+[core]
+	ignorecase = false
+	editor = nvim
+	pager = delta
+
+[interactive]
+	diffFilter = delta --color-only
+
+[delta]
+	line-numbers = true
+	navigate = true
+	light = false
+	side-by-side = true
+
+[merge]
+	conflictstyle = diff3
+
+[diff]
+	colorMoved = default
+
+[user]
+	name = Micky Clerkin-Oliver
+	email = mclerkinoliver@confluent.io
+
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+
+[advice]
+	pushNonFastForward = false
