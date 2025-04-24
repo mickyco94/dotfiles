@@ -1,0 +1,34 @@
+[core]
+  ignorecase = false
+  editor = nvim
+  pager = delta
+
+[push]
+  autoSetupRemote = true
+
+[interactive]
+  diffFilter = delta --color-only
+
+[delta]
+  line-numbers = true
+  navigate = true
+  light = false
+  side-by-side = true
+
+[merge]
+  conflictstyle = diff3
+
+[diff]
+  colorMoved = default
+
+[user]
+  name = "mickyco94"
+  email = "mickyclerkinoliver@gmail.com"
+
+[alias]
+  new = "!f() { git checkout -b $USER/$1; }; f"
+  wipe = "reset HEAD --hard"
+  root = rev-parse --show-toplevel
+  co = checkout
+  ignore = "!gi() { curl -sL https://www.toptal.com/developers/gitignore/api/$@ ;}; gi"
+
