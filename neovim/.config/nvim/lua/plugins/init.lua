@@ -1,5 +1,10 @@
 return {
   {
+    "mrcjkb/rustaceanvim",
+    version = "^6", -- Recommended
+    lazy = false, -- This plugin is already lazy
+  },
+  {
     "folke/twilight.nvim",
     cmd = "Twilight",
   },
@@ -43,6 +48,7 @@ return {
         "vimdoc",
         "html",
         "css",
+        "rust",
         "python",
       },
     },
