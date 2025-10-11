@@ -10,17 +10,9 @@ return {
     lazy = false, -- This plugin is already lazy
   },
   {
-    "folke/twilight.nvim",
-    cmd = "Twilight",
-  },
-  {
     "folke/zen-mode.nvim",
     opts = {
-      plugins = {
-        twilight = {
-          enabled = true,
-        },
-      },
+      plugins = {},
     },
     cmd = "ZenMode",
   },
@@ -58,5 +50,9 @@ return {
         "haskell",
       },
     },
+  },
+  {
+    "ThePrimeagen/vim-be-good",
+    cmd = "VimBeGood",
   },
 }

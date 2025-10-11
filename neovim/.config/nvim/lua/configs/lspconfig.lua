@@ -9,5 +9,5 @@ lspconfig.ltex.setup {
   },
 }
 
-local servers = { "html", "cssls", "gopls", "pyright", "ltex" }
+local servers = { "clangd", "html", "cssls", "gopls", "pyright", "ltex" }
 vim.lsp.enable(servers)
