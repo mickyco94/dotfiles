@@ -6,8 +6,7 @@ vim.opt.relativenumber = true
 vim.opt.list = true
 
 -- Clipboard
-vim.opt.clipboard = "unnamedplus"  -- use system clipboard
-
+vim.opt.clipboard = "unnamedplus" -- use system clipboard
 
 vim.opt.listchars = {
   space = "·", -- single dot for spaces
@@ -31,10 +30,20 @@ vim.diagnostic.config {
 }
 
 -- hide intro
-vim.opt.shortmess:append("I")
+vim.opt.shortmess:append "I"
 
-vim.o.expandtab = true        -- use spaces instead of tabs
-vim.o.tabstop = 2             -- how many spaces a tab counts for
-vim.o.shiftwidth = 2          -- how many spaces for auto-indent
-vim.o.softtabstop = 2         -- how many spaces when pressing <Tab> or <BS>
+vim.o.expandtab = true -- use spaces instead of tabs
+vim.o.tabstop = 2 -- how many spaces a tab counts for
+vim.o.shiftwidth = 2 -- how many spaces for auto-indent
+vim.o.softtabstop = 2 -- how many spaces when pressing <Tab> or <BS>
 
+-- reload on disk change
+vim.o.autoread = true
+vim.api.nvim_create_autocmd({ "FocusGained", "BufEnter", "CursorHold", "CursorHoldI" }, {
+  command = "checktime",
+})
+vim.api.nvim_create_autocmd("FileChangedShellPost", {
+  callback = function()
+    vim.notify("File changed on disk. Buffer reloaded!", vim.log.levels.INFO)
+  end,
+})
